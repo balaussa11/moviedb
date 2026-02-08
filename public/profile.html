@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MovieDB — Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <span class="logo">MovieDB</span>
+  <div class="nav-buttons">
+    <button onclick="goHome()">🏠 Home</button>
+    <button onclick="goBrowse()">🎬 Browse</button>
+    <button onclick="logout()">🚪 Logout</button>
+  </div>
+</header>
+
+<div class="container profile-page">
+
+  <!-- PROFILE HEADER -->
+  <h2 class="profile-title">My Profile</h2>
+
+  <div class="profile-header">
+    <div class="avatar-wrapper">
+      <img id="avatar" src="avatar-placeholder.png" class="avatar">
+
+      <label class="change-avatar">
+        Change photo
+        <input type="file" id="avatarInput" accept="image/*" hidden>
+      </label>
+    </div>
+
+    <div class="profile-info">
+      <input
+        id="displayName"
+        class="display-name"
+        placeholder="Your name"
+      >
+
+      <p class="meta">
+        <span id="profileEmail"></span> ·
+        <span id="profileRole"></span>
+      </p>
+
+      <button onclick="saveProfile()">💾 Save</button>
+
+    </div>
+  </div>
+
+  <section id="favoritesSection">
+  <h2>❤️ My Favorites</h2>
+  <div class="movies-grid" id="favoriteMovies"></div>
+</section>
+
+<section id="reviewsSection">
+  <h2>📝 My Reviews</h2>
+  <div id="myReviews"></div>
+</section>
+
+
+</div>
+
+<script src="app.js"></script>
+<div id="toast-container"></div>
+</body>
+</html>

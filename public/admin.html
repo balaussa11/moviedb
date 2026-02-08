@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MovieDB — Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="admin-header">
+  👑 Admin Panel
+  <div>
+    <button onclick="goHome()">🏠 Home</button>
+    <button onclick="goBrowse()">🎬 Browse</button>
+    <button onclick="logout()">🚪 Logout</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <h2>Add Movie</h2>
+
+  <input id="movieName" placeholder="Movie name">
+<input id="movieGenre" placeholder="Genre">
+<input id="movieYear" placeholder="Year">
+<input id="movieDirector" placeholder="Director">
+<textarea id="movieDescription" placeholder="Description"></textarea>
+<input
+  id="moviePoster"
+  type="text"
+  placeholder="Poster image URL (https://...)"
+/>
+
+
+
+<select id="movieType">
+  <option value="movie">🎬 Movie</option>
+  <option value="series">📺 Series</option>
+  <option value="cartoon">🧸 Cartoon</option>
+</select>
+
+<button onclick="addMovie()">Add Movie</button>
+
+
+  <h2>All Movies</h2>
+  <div class="movies-grid" id="movies"></div>
+
+</div>
+
+<script src="app.js"></script>
+<script>
+  const role = localStorage.getItem("role");
+  const token = localStorage.getItem("token");
+
+  if (!token || role !== "admin") {
+    alert("Admins only");
+    window.location.href = "index.html";
+  }
+
+  loadMovies();
+</script>
+<div id="toast-container"></div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MovieDB — Browse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <span class="logo">MovieDB</span>
+  <div>
+    <button onclick="goHome()">🏠 Home</button>
+    <button onclick="goProfile()">👤 Profile</button>
+    <button id="adminBtn" onclick="goAdmin()">👑 Admin</button>
+    <button onclick="logout()">🚪 Logout</button>
+  </div>
+</header>
+
+<div class="container">
+  <h2>Browse</h2>
+  <input
+  type="text"
+  id="searchInput"
+  placeholder="🔍 Search movie..."
+  oninput="searchMovies()"
+  class="search"
+/>
+
+
+  <div class="filters">
+    <button onclick="loadMovies()">All</button>
+    <button onclick="loadMovies('movie')">Movies</button>
+    <button onclick="loadMovies('series')">Series</button>
+    <button onclick="loadMovies('cartoon')">Cartoons</button>
+    <button onclick="showMyFavorites()">❤️ My Favorites</button>
+
+  </div>
+
+  <div class="movies-grid" id="movies"></div>
+</div>
+
+<script src="app.js"></script>
+<script>
+  const token = localStorage.getItem("token");
+  if (!token) {
+    alert("Login required");
+    window.location.href = "index.html";
+  }
+  loadMovies();
+</script>
+<div id="toast-container"></div>
+</body>
+</html>
