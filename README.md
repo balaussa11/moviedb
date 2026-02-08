@@ -60,13 +60,16 @@ https://moviedb-b1sj.onrender.com
 git clone https://github.com/balaussa11/moviedb.git
 
 2. Install dependencies
+```bash
 npm install
 
 3.Create .env file
+```bash
 MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_secret
 
 4.Run server
+```bash
 npm run dev
 
 Server runs on http://localhost:3000
