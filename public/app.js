@@ -1,4 +1,5 @@
-const API = "http://localhost:3000";
+const API = "";
+
 
 let userFavorites = [];
 
@@ -15,6 +16,7 @@ function logout(){
 
 /* ================= AUTH ================= */
 async function login(){
+  console.log("LOGIN CLICKED");
   const res = await fetch(API+"/auth/login",{
     method:"POST",
     headers:{ "Content-Type":"application/json" },
@@ -33,6 +35,7 @@ async function login(){
 }
 
 async function register(){
+  console.log("REGISTER CLICKED");
   if(!regEmail.value || !regPassword.value){
     return showToast("Fill all fields", "error");
   }
