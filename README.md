@@ -12,7 +12,7 @@ https://moviedb-b1sj.onrender.com
 - Backend: Node.js, Express
 - Database: MongoDB Atlas
 - Authentication: JWT
-- Frontend: HTML, CSS, Vanilla JavaScript
+- Frontend: HTML, CSS, JavaScript
 - Deployment: Render
 
 ---
