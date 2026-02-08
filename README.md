@@ -35,10 +35,10 @@ https://moviedb-b1sj.onrender.com
 ## 📡 API Documentation
 
 ### Auth
-- POST `/auth/register` — Register user
+- POST `/auth/register` — Register 
   <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/2e2baff3-9e3a-4be5-b9b7-3a07d23416c6" />
 
-- POST `/auth/login` — Login user
+- POST `/auth/login` — Login 
   <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/f52c958d-5545-4d5b-b16d-d220d8a08d56" />
 
 
